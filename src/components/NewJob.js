@@ -70,8 +70,8 @@ function NewJob() {
                       name="category"
                       value={data.category}
                       onChange={handleChange}>
-                      <option value="Onsite" disabled>--select category--</option>
-                      <option>Remote</option>
+                      <option disabled>--select category--</option>
+                      <option value="Onsite">Remote</option>
                       <option value="Onsite">Onsite</option>
                       <option vaue="Hybrid">Hybrid</option>
                     </select>
