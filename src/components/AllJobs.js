@@ -7,7 +7,7 @@ function AllJobs() {
   
   useEffect(() => {
     setJobs(data);
-  }, []);
+  }, [jobs]);
 
   console.log(jobs);
   return (
