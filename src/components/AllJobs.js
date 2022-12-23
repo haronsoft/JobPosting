@@ -9,7 +9,6 @@ function AllJobs() {
     setJobs(data);
   }, []);
 
-  console.log(jobs);
   return (
     <div className="h-screen bg-indigo-100 ">
       <div className="flex flex-col sm:flex-col md:flex-col gap-2 p-4 h-screen">

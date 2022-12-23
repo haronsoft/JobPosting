@@ -13,11 +13,9 @@ function JobPosting({
   const [readMore, setReadMore] = useState(false);
   const [jobs, setJobs] = useState([]);
   const removeJob = (id) => {
-    debugger;
     const data = JSON.parse(localStorage.getItem("jobs") || "[]");
     const newjobs = data.filter((job) => job.id !== id);
     setJobs(newjobs);
-    console.log(jobs)
   };
   return (
     <div>
