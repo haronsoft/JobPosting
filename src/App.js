@@ -22,7 +22,7 @@ function App() {
                 <AllJobs />
               </Route>
               <Route path="/goToGoogle"
-       render={() => window.location = "https://www.google.com"} />
+       render={() => window.location = "https://github.com/haronsoft/JobPosting"} />
             </Switch>
           </div>
         </div>
