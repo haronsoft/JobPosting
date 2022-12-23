@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import {  useHistory } from "react-router-dom";
 import swal from 'sweetalert';
 function NewJob() {
   const [data, setData] = useState({});
@@ -16,25 +16,24 @@ function NewJob() {
     e.preventDefault();
     const newdata = {...data, id:new Date().getTime()}
     //setJobs([...data, newdata])
-    jobs.push(newdata);
-    var available = localStorage.getItem("jobs");
-    if(available === null) {
-      localStorage.setItem('jobs', JSON.stringify(jobs));
-    }else{
-      const jobs = JSON.parse(localStorage.getItem('jobs') || '[]');
-      jobs.push(newdata);
-      window.localStorage.setItem('jobs', JSON.stringify(jobs));
-    }
-    setData({title:'',category:'',date:'',qualification:'',skills:'',description:''})
-    swal({
-      title: "Job Saved Successfully!",
-      text: "View Added Job Listings..",
-      icon: "success",
-      button: "Ok",
-    });
-    history.push('/allJobs');
     if(data.title && data.category && data.date && data.qualification && data.skills && data.description){
-    
+      jobs.push(newdata);
+      var available = localStorage.getItem("jobs");
+      if(available === null) {
+        localStorage.setItem('jobs', JSON.stringify(jobs));
+      }else{
+        const jobs = JSON.parse(localStorage.getItem('jobs') || '[]');
+        jobs.push(newdata);
+        window.localStorage.setItem('jobs', JSON.stringify(jobs));
+      }
+      setData({title:'',category:'',date:'',qualification:'',skills:'',description:''})
+      swal({
+        title: "Job Saved Successfully!",
+        text: "View Added Job Listings..",
+        icon: "success",
+        button: "Ok",
+      });
+      history.push('/allJobs');
     }
   
   };

@@ -17,6 +17,7 @@ function JobPosting({
     const data = JSON.parse(localStorage.getItem("jobs") || "[]");
     const newjobs = data.filter((job) => job.id !== id);
     setJobs(newjobs);
+    console.log(jobs)
   };
   return (
     <div>

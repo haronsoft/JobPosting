@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link,Route } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 const Nav = () => {
   let Links = [
@@ -9,7 +9,7 @@ const Nav = () => {
     { name: "Source Code", link: "/goToGoogle" },
   ];
   let [open, setOpen] = useState(false);
-  const link = 'https://ionic.io/ionicons';
+  const link = 'https://github.com/haronsoft/JobPosting';
   return (
     <div className="shadow-md w-full fixed top-0 left-0">
       <div className="md:flex items-center justify-between bg-white py-4 md:px-10 px-7">
@@ -45,7 +45,7 @@ const Nav = () => {
             </li>
           ))}
           <a target="_blank" rel="noopener noreferrer" href={link} className='bg-indigo-600 text-white font-[Poppins] py-2 px-6 rounded md:ml-8 hover:bg-indigo-400 
-    duration-500'>Get Started</a>
+    duration-500' title="source code">Get Started</a>
   
         </ul>
       </div>
