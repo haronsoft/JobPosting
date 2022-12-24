@@ -21,7 +21,7 @@ function JobPosting({
     <div>
       <div
         className={`card shadow  rounded  p-4 bg-gray-50 border-4 ${
-          category === "remote" ? "border-l-indigo-600" : "border-l-red-600"
+          category === "Remote" ? "border-l-indigo-600" : "border-l-red-600"
         }  hover:bg-gray-100`}
         key={id}
       >
